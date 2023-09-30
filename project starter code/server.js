@@ -36,7 +36,7 @@ app.get('/filteredimage/', async (req, res) => {
       res.sendFile(result);
       res.on('finish', () => deleteLocalFiles([result]));
     })
-    .catch((err) => res.status(422).send(err));
+    .catch((err) => res.status(404).send(err));
 });
 //! END @TODO1
 
